@@ -1,5 +1,6 @@
 ---
-const { info, featureOne, featureTwo, featureThree } = Astro.props;
+const { info, featureOne, featureTwo, featureThree, featureFour, featureFive } =
+  Astro.props.info;
 ---
 
 <section class="info-area">
@@ -8,16 +9,21 @@ const { info, featureOne, featureTwo, featureThree } = Astro.props;
       {info}
     </h3>
     <ul class="ml-6 list-inside">
-      <li>
-        {featureOne}
-      </li>
-      <li>
-        {featureTwo}
-      </li>
-      <li>
-        {featureThree}
-      </li>
+      <li>{featureOne}</li>
+      <li>{featureTwo}</li>
+      <li>{featureThree}</li>
+      <li>{featureFour}</li>
+      <li>{featureFive}</li>
     </ul>
+    <div>THIS IS A WORKSHOP YOU WON’T WANT TO MISS!</div>
+  </div>
+  <div class="info-area__offer">
+    <div>– SPECIAL VIP ACCESS –</div>
+    <p>
+      FIRST 10 PEOPLE TO SIGN UP FOR ‘HANDS-ON’ GET THE OPPORTUNITY TO
+      PARTICIPATE IN SEPTEMBER FASHION WEEK WITH EDWARD TRICOMI & LAARA RAYNIER
+      AND ENJOY COCKTAILS WITH US AFTER THIS EVENT
+    </p>
   </div>
 </section>
 

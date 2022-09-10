@@ -23,10 +23,10 @@ module.exports = {
           ...require("daisyui/src/colors/themes")["[data-theme=autumn]"], // Autumn base theme
           // primary: "#8C0327",
           // secondary: "#D85251",
-          accent: "#f43f5e", // accent: "#D59B6A",
+          // accent: "#D59B6A",
           // neutral: "#826A5C",
           // "base-100": "#f1f1f1",
-          info: "#fcd34d", // info: "#42ADBB",
+          // info: "#42ADBB",
           // success: "#499380",
           // warning: "#E97F14",
           // error: "#DF1A2F",

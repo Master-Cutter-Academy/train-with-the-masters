@@ -1,5 +1,7 @@
 ---
-const { image, heading, subHeading, presentedBy, spotlight } = Astro.props;
+const { image, heading, headingImage, subHeading, presentedBy, spotlight } =
+  Astro.props.hero;
+const { date } = Astro.props.eventInfo;
 ---
 
 <section class="hero-area" style={`background-image: url(${image})`}>
@@ -8,14 +10,17 @@ const { image, heading, subHeading, presentedBy, spotlight } = Astro.props;
       <span>
         {heading}
       </span>
+      <img src={headingImage} />
       <span>{presentedBy}</span>
+      <span>{subHeading}</span>
+      <span>{date}</span>
     </div>
   </div>
 </section>
 <!-- Hero Feature Area -->
 <section class="hero-feature-area">
   <div class="hero-feature-area__content">
-    <span>{spotlight}</span>
+    <span>Featuring<br />{spotlight}</span>
   </div>
 </section>
 
@@ -25,7 +30,7 @@ const { image, heading, subHeading, presentedBy, spotlight } = Astro.props;
     @layer min-h-content;
   }
   .hero-area__overlay {
-    @apply hero-overlay bg-opacity-60;
+    @apply hero-overlay grid justify-center bg-opacity-60;
   }
   .hero-area__content {
     @apply hero-content flex-col items-center;
@@ -35,6 +40,9 @@ const { image, heading, subHeading, presentedBy, spotlight } = Astro.props;
   }
   .hero-area__content h1 span {
     @apply text-xl font-black text-primary-content;
+  }
+  .hero-area__content img {
+    @apply w-1/3 rounded-md;
   }
   .hero-area__content span {
     @apply text-base font-bold text-secondary-content lg:text-3xl lg:leading-relaxed;

@@ -1,4 +1,4 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode", // Set default formatter to prettier
-  "prettier.documentSelectors": ["**/*.astro"] // Prettier document selectors
+  "prettier.documentSelectors": ["**/*.astro"] // Enable prettier for astro files
 }

@@ -13,7 +13,7 @@ const {
   imgFour,
   imgFourAlt,
   imgFourLink,
-} = Astro.props;
+} = Astro.props.press;
 ---
 
 <section class="press-area">
@@ -38,7 +38,7 @@ const {
     @apply my-10 mb-4;
   }
   .press-area .press-area__heading h4 {
-    @apply text-center text-3xl font-bold text-secondary underline underline-offset-8 drop-shadow-sm lg:text-4xl;
+    @apply text-center text-3xl font-bold text-secondary-content underline underline-offset-8 drop-shadow-sm lg:text-4xl;
   }
   .press-area .press-area__images {
     @apply flex flex-col place-content-center items-center space-y-10 px-10 pb-10 lg:flex-row lg:flex-wrap lg:space-x-10;
