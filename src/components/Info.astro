@@ -1,0 +1,37 @@
+---
+const { info, featureOne, featureTwo, featureThree } = Astro.props;
+---
+
+<section class="info-area">
+  <div class="info-area__content">
+    <h3>
+      {info}
+    </h3>
+    <ul class="ml-6 list-inside">
+      <li>
+        {featureOne}
+      </li>
+      <li>
+        {featureTwo}
+      </li>
+      <li>
+        {featureThree}
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .info-area {
+    @apply px-8 pt-10 lg:pt-8;
+  }
+  .info-area__content {
+    @apply container mx-auto max-w-5xl;
+  }
+  .info-area__content h3 {
+    @apply text-center text-2xl font-bold;
+  }
+  .info-area__content ul {
+    @apply prose-base list-disc lg:prose-lg;
+  }
+</style>

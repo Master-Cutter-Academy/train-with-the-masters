@@ -1,0 +1,125 @@
+---
+const {
+  galleryMessage,
+  galleryImageOne,
+  galleryImageOneAlt,
+  galleryImageTwo,
+  galleryImageTwoAlt,
+  galleryImageThree,
+  galleryImageThreeAlt,
+  galleryImageFour,
+  galleryImageFourAlt,
+  galleryImageFive,
+  galleryImageFiveAlt,
+  galleryImageSix,
+  galleryImageSixAlt,
+  galleryImageSeven,
+  galleryImageSevenAlt,
+  galleryImageEight,
+  galleryImageEightAlt,
+} = Astro.props;
+---
+
+<section class="lightbox">
+  <div class="gallery-area">
+    <div class="prose-xl m-auto w-2/3 px-6 py-8">
+      {galleryMessage}
+    </div>
+    <div class="sm:columns-2 lg:columns-3">
+      <img
+        src={galleryImageTwo}
+        class="thumbnail"
+        alt={galleryImageTwoAlt}
+        tabindex="0"
+      />
+      <img
+        src={galleryImageThree}
+        class="thumbnail"
+        alt={galleryImageThreeAlt}
+      />
+      <img src={galleryImageOne} class="thumbnail" alt={galleryImageOneAlt} />
+      <img src={galleryImageFour} class="thumbnail" alt={galleryImageFourAlt} />
+      <img src={galleryImageFive} class="thumbnail" alt={galleryImageFiveAlt} />
+      <img src={galleryImageSix} class="thumbnail" alt={galleryImageSixAlt} />
+      <img
+        src={galleryImageSeven}
+        class="thumbnail"
+        alt={galleryImageSevenAlt}
+      />
+      <img
+        src={galleryImageEight}
+        class="thumbnail"
+        alt={galleryImageEightAlt}
+      />
+    </div>
+  </div>
+  <dialog></dialog>
+</section>
+
+<script>
+  import klik from "klik";
+
+  const lightboxImages = document.querySelectorAll(".lightbox img");
+  const lightboxDialog = document.querySelector(".lightbox dialog");
+
+  for (const lightboxImage of lightboxImages) {
+    const lightboxClone = lightboxImage.cloneNode();
+
+    lightboxImage.addEventListener("click", () => {
+      lightboxDialog.replaceChildren(lightboxClone);
+      lightboxDialog.showModal();
+    });
+
+    klik.on(lightboxImage);
+  }
+
+  lightboxDialog.addEventListener("click", (event) => {
+    if (event.target === lightboxDialog) {
+      lightboxDialog.close();
+    }
+  });
+</script>
+
+<style>
+  section {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  section img {
+    /* Layout */
+    width: 100px;
+  }
+
+  dialog:modal {
+    display: flex;
+
+    /* Layout */
+    padding: 1rem;
+
+    /* Appearance */
+    background-color: hsl(0 0% 0%);
+    border-style: none;
+    box-shadow: 4.2px 0 8.3px hsl(0 0% 0% / 50%);
+  }
+
+  dialog img {
+    display: block;
+
+    /* Layout */
+    height: calc(90vmin - 2rem);
+    width: auto;
+  }
+
+  ::backdrop {
+    /* Appearance */
+    background-color: hsl(0 0% 0% / 80%);
+  }
+
+  .gallery-area {
+    @apply flex flex-col items-center;
+  }
+  .gallery-area img {
+    @apply aspect-auto w-[clamp(35%,45%,42%)] rounded-md;
+  }
+</style>

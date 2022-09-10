@@ -1,0 +1,43 @@
+---
+const { image, imageAlt, quote, statement, stylist } = Astro.props;
+---
+
+<!-- Personal Statement  -->
+<section class="personal-statement">
+  <div class="container-one">
+    <p class="text-base leading-loose">
+      {statement}
+    </p>
+  </div>
+  <div class="container-two">
+    <p class="font-lg font-medium leading-loose">
+      {quote}
+    </p>
+    <div class="stylist-box">
+      <img src={image} class="mask mask-circle" alt={imageAlt} />
+      <p class="ml-6 text-lg font-bold">
+        {stylist}
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .personal-statement {
+    @apply mx-8 flex flex-col flex-nowrap content-center items-start justify-center gap-10 py-3 align-top lg:flex-row;
+  }
+
+  .personal-statement .container-one {
+    @apply lg:w-4/12;
+  }
+
+  .personal-statement .container-two {
+    @apply lg:w-3/12;
+  }
+  .personal-statement .container-two .stylist-box {
+    @apply mt-2 flex flex-row items-center justify-center;
+  }
+  .personal-statement .container-two .stylist-box .mask-circle {
+    width: 6em;
+  }
+</style>

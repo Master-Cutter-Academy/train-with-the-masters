@@ -1,0 +1,52 @@
+---
+const {
+  pressHeading,
+  imgOne,
+  imgOneAlt,
+  imgOneLink,
+  imgTwo,
+  imgTwoAlt,
+  imgTwoLink,
+  imgThree,
+  imgThreeAlt,
+  imgThreeLink,
+  imgFour,
+  imgFourAlt,
+  imgFourLink,
+} = Astro.props;
+---
+
+<section class="press-area">
+  <div class="press-area__heading">
+    <h4>
+      {pressHeading}
+    </h4>
+  </div>
+  <div class="press-area__images">
+    <a href={imgOneLink}><img src={imgOne} alt={imgOneAlt} /></a>
+    <a href={imgTwoLink}><img src={imgTwo} alt={imgTwoAlt} /></a>
+    <a href={imgThreeLink}><img src={imgThree} alt={imgThreeAlt} /></a>
+    <a href={imgFourLink}><img src={imgFour} alt={imgFourAlt} /></a>
+  </div>
+</section>
+
+<style>
+  .press-area {
+    @apply flex flex-col bg-base-200;
+  }
+  .press-area .press-area__heading {
+    @apply my-10 mb-4;
+  }
+  .press-area .press-area__heading h4 {
+    @apply text-center text-3xl font-bold text-secondary underline underline-offset-8 drop-shadow-sm lg:text-4xl;
+  }
+  .press-area .press-area__images {
+    @apply flex flex-col place-content-center items-center space-y-10 px-10 pb-10 lg:flex-row lg:flex-wrap lg:space-x-10;
+  }
+  .press-area .press-area__images a {
+    @apply aspect-auto shadow-lg lg:w-[clamp(10%,20%,30%)];
+  }
+  .press-area .press-area__images a img {
+    @apply rounded-box shadow-lg;
+  }
+</style>

@@ -1,0 +1,55 @@
+---
+const { image, heading, subHeading, presentedBy, spotlight } = Astro.props;
+---
+
+<section class="hero-area" style={`background-image: url(${image})`}>
+  <div class="hero-area__overlay">
+    <div class="hero-area__content">
+      <span>
+        {heading}
+      </span>
+      <span>{presentedBy}</span>
+    </div>
+  </div>
+</section>
+<!-- Hero Feature Area -->
+<section class="hero-feature-area">
+  <div class="hero-feature-area__content">
+    <span>{spotlight}</span>
+  </div>
+</section>
+
+<style>
+  .hero-area {
+    @apply hero py-20;
+    @layer min-h-content;
+  }
+  .hero-area__overlay {
+    @apply hero-overlay bg-opacity-60;
+  }
+  .hero-area__content {
+    @apply hero-content flex-col items-center;
+  }
+  .hero-area__content h1 {
+    @apply text-3xl font-black text-primary-content;
+  }
+  .hero-area__content h1 span {
+    @apply text-xl font-black text-primary-content;
+  }
+  .hero-area__content span {
+    @apply text-base font-bold text-secondary-content lg:text-3xl lg:leading-relaxed;
+  }
+
+  .hero-feature-area {
+    @apply bg-primary py-8 px-6;
+  }
+  .hero-feature-area__content {
+    @apply mx-auto max-w-6xl text-center;
+  }
+  .hero-feature-area__content h3 {
+    @apply text-3xl font-bold text-accent;
+  }
+  .hero-feature-area__content span {
+    @apply text-2xl font-semibold leading-relaxed text-neutral-content;
+  }
+</style>

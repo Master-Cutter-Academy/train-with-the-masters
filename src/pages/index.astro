@@ -1,0 +1,174 @@
+---
+// Base Layout
+import Base from "../layouts/Base.astro";
+// Components
+import Hero from "../components/Hero.astro";
+import Info from "../components/Info.astro";
+import EventInfo from "../components/EventInfo.astro";
+import CTA from "../components/CTA.astro";
+import PersonalStatement from "../components/PersonalStatement.astro";
+import VideoFeature from "../components/VideoFeature.astro";
+import Press from "../components/Press.astro";
+import Gallery from "../components/Gallery.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Questions from "../components/Questions.astro";
+import Footer from "../components/Footer.astro";
+// Data
+import twtm from "../data/train-with-the-masters.json";
+import info from "../data/info.json";
+import eventInfo from "../data/eventInfo.json";
+import cta from "../data/cta.json";
+import personalStatement from "../data/personalStatements.json";
+import press from "../data/press.json";
+import videoFeature from "../data/youtubeVideo.json";
+import gallery from "../data/gallery.json";
+---
+
+<Base pageTitle="Train with the Masters" />
+
+<!-- Hero Area -->
+<Hero
+  image={twtm.hero.image}
+  imageAlt={twtm.hero.imageAlt}
+  heading={twtm.hero.heading}
+  subHeading={twtm.hero.subHeading}
+  presentedBy={twtm.hero.presentedBy}
+  spotlight={twtm.hero.spotlight}
+/>
+<!-- Info Area -->
+<Info
+  info={info.info}
+  featureOne={info.featureOne}
+  featureTwo={info.featureTwo}
+  featureThree={info.featureThree}
+/>
+
+<!-- CTA Area 1 -->
+<section class="cta-area__one">
+  <EventInfo
+    callOut={eventInfo.callOut}
+    date={eventInfo.date}
+    time={eventInfo.time}
+    location={eventInfo.location}
+    locationName={eventInfo.locationName}
+    address={eventInfo.address}
+    cityStateZip={eventInfo.cityStateZip}
+    locationImageAlt={eventInfo.locationImageAlt}
+    locationImage={eventInfo.locationImage}
+  />
+
+  <CTA
+    heading={cta.heading}
+    optionOne={cta.optionOne}
+    optionTwo={cta.optionTwo}
+    optionThree={cta.optionThree}
+  />
+</section>
+
+<!-- Personal Statments -->
+<PersonalStatement
+  stylist={personalStatement.edward.stylist}
+  image={personalStatement.edward.image}
+  image-alt={personalStatement.edward.imageAlt}
+  quote={personalStatement.edward.quote}
+  statement={personalStatement.edward.statement}
+/>
+
+<div class="divider"></div>
+
+<PersonalStatement
+  stylist={personalStatement.laara.stylist}
+  image={personalStatement.laara.image}
+  image-alt={personalStatement.laara.imageAlt}
+  quote={personalStatement.laara.quote}
+  statement={personalStatement.laara.statement}
+/>
+
+<!-- CTA Area 2 -->
+<section class="cta-area__two">
+  <CTA
+    heading={cta.heading}
+    optionOne={cta.optionOne}
+    optionTwo={cta.optionTwo}
+    optionThree={cta.optionThree}
+  />
+
+  <!-- Video Feature Area -->
+  <VideoFeature
+    videoFeatureHeading={videoFeature.videoFeatureHeading}
+    youtubeVideoID={videoFeature.youtubeVideoID}
+  />
+</section>
+
+<!-- Press Area -->
+<Press
+  pressHeading={press.pressHeading}
+  imgOne={press.imgOne}
+  imgOneAlt={press.imgOneAlt}
+  imgOneLink={press.imgOneLink}
+  imgTwo={press.imgTwo}
+  imgTwoAlt={press.imgTwoAlt}
+  imgTwoLink={press.imgTwoLink}
+  imgThree={press.imgThree}
+  imgThreeAlt={press.imgThreeAlt}
+  imgThreeLink={press.imgThreeLink}
+  imgFour={press.imgFour}
+  imgFourAlt={press.imgFourAlt}
+  imgFourLink={press.imgFourLink}
+/>
+
+<!-- Gallery Area -->
+<Gallery
+  galleryMessage={gallery.galleryMessage}
+  galleryImageOne={gallery.galleryImageOne}
+  galleryImageOneAlt={gallery.galleryImageOneAlt}
+  galleryImageTwo={gallery.galleryImageTwo}
+  galleryImageTwoAlt={gallery.galleryImageTwoAlt}
+  galleryImageThree={gallery.galleryImageThree}
+  galleryImageThreeAlt={gallery.galleryImageThreeAlt}
+  galleryImageFour={gallery.galleryImageFour}
+  galleryImageFourAlt={gallery.galleryImageFourAlt}
+  galleryImageFive={gallery.galleryImageFive}
+  galleryImageFiveAlt={gallery.galleryImageFiveAlt}
+  galleryImageSix={gallery.galleryImageSix}
+  galleryImageSixAlt={gallery.galleryImageSixAlt}
+  galleryImageSeven={gallery.galleryImageSeven}
+  galleryImageSevenAlt={gallery.galleryImageSevenAlt}
+  galleryImageEight={gallery.galleryImageEight}
+  galleryImageEightAlt={gallery.galleryImageEightAlt}
+/>
+
+<!-- CTA Area 3 -->
+<div class="cta-area__three">
+  <CTA
+    heading={cta.heading}
+    optionOne={cta.optionOne}
+    optionTwo={cta.optionTwo}
+    optionThree={cta.optionThree}
+  />
+</div>
+
+<!-- Testimonails Area -->
+<Testimonials heading="Watch Our Amazing Testimonials!" />
+
+<!-- Questions Area -->
+<Questions
+  heading="Have specific questions? Talk to one of our workshop specialists!"
+/>
+
+<Footer />
+
+<style>
+  .cta-area__one {
+    @apply m-8 flex flex-col place-content-center gap-10 py-3 align-middle lg:flex-row;
+  }
+  .cta-area__two {
+    @apply mx-8 mt-3 mb-6 flex flex-col place-content-center gap-10 py-3 align-middle lg:flex-row;
+  }
+  .cta-area__three {
+    @apply m-auto w-[clamp(75%,80%,77%)];
+  }
+  .personal-statement-separator {
+    @apply my-2 border-4;
+  }
+</style>
