@@ -9,7 +9,7 @@ const {
   locationName,
   locationImage,
   locationImageAlt,
-} = Astro.props;
+} = Astro.props.eventInfo;
 ---
 
 <!-- Event Info -->
@@ -51,7 +51,7 @@ const {
     @apply prose-lg font-semibold text-info lg:prose-2xl;
   }
   .event-info__location__name {
-    @apply text-xl font-extrabold lg:text-3xl;
+    @apply text-xl font-extrabold text-accent-content lg:text-3xl;
   }
   .event-info img {
     @apply mt-4;

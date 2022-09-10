@@ -1,5 +1,6 @@
 ---
-const { info, featureOne, featureTwo, featureThree } = Astro.props;
+const { info, featureOne, featureTwo, featureThree, featureFour, featureFive } =
+  Astro.props.info;
 ---
 
 <section class="info-area">
@@ -8,16 +9,22 @@ const { info, featureOne, featureTwo, featureThree } = Astro.props;
       {info}
     </h3>
     <ul class="ml-6 list-inside">
-      <li>
-        {featureOne}
-      </li>
-      <li>
-        {featureTwo}
-      </li>
-      <li>
-        {featureThree}
-      </li>
+      <li>{featureOne}</li>
+      <li>{featureTwo}</li>
+      <li>{featureThree}</li>
+      <li>{featureFour}</li>
     </ul>
+    <div class="mb-6 text-center font-mono text-3xl font-bold">
+      THIS IS A WORKSHOP YOU WON’T WANT TO MISS!
+    </div>
+  </div>
+</section>
+<section class="info-area__offer">
+  <div class="info-area__offer__content">
+    <span class="block text-xl font-bold">– SPECIAL VIP ACCESS –</span>
+    FIRST 10 PEOPLE TO SIGN UP FOR ‘HANDS-ON’ GET THE OPPORTUNITY TO PARTICIPATE
+    IN SEPTEMBER FASHION WEEK WITH EDWARD TRICOMI & LAARA RAYNIER AND ENJOY COCKTAILS
+    WITH US AFTER THIS EVENT
   </div>
 </section>
 
@@ -33,5 +40,11 @@ const { info, featureOne, featureTwo, featureThree } = Astro.props;
   }
   .info-area__content ul {
     @apply prose-base list-disc lg:prose-lg;
+  }
+  .info-area__offer {
+    @apply w-full bg-secondary py-4;
+  }
+  .info-area__offer .info-area__offer__content {
+    @apply mx-auto w-8/12 text-center text-lg font-medium text-secondary-content;
   }
 </style>

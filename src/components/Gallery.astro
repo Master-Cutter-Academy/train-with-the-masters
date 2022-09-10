@@ -17,15 +17,29 @@ const {
   galleryImageSevenAlt,
   galleryImageEight,
   galleryImageEightAlt,
-} = Astro.props;
+} = Astro.props.gallery;
 ---
 
 <section class="lightbox">
   <div class="gallery-area">
-    <div class="prose-xl m-auto w-2/3 px-6 py-8">
-      {galleryMessage}
+    <div class="flex px-6 py-8">
+      <img
+        src={galleryImageOne}
+        class="thumbnail hidden lg:block"
+        alt={galleryImageOneAlt}
+      />
+      <p class="prose-xl mr-8 ml-8 w-full lg:w-2/3">
+        {galleryMessage}
+      </p>
+      <img
+        src={galleryImageSeven}
+        class="thumbnail hidden lg:block"
+        alt={galleryImageSevenAlt}
+      />
     </div>
-    <div class="sm:columns-2 lg:columns-3">
+    <div
+      class="mb-8 grid grid-cols-3 justify-items-center gap-8 lg:grid-cols-6"
+    >
       <img
         src={galleryImageTwo}
         class="thumbnail"
@@ -37,15 +51,9 @@ const {
         class="thumbnail"
         alt={galleryImageThreeAlt}
       />
-      <img src={galleryImageOne} class="thumbnail" alt={galleryImageOneAlt} />
       <img src={galleryImageFour} class="thumbnail" alt={galleryImageFourAlt} />
       <img src={galleryImageFive} class="thumbnail" alt={galleryImageFiveAlt} />
       <img src={galleryImageSix} class="thumbnail" alt={galleryImageSixAlt} />
-      <img
-        src={galleryImageSeven}
-        class="thumbnail"
-        alt={galleryImageSevenAlt}
-      />
       <img
         src={galleryImageEight}
         class="thumbnail"
@@ -82,13 +90,7 @@ const {
 
 <style>
   section {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  section img {
-    /* Layout */
-    width: 100px;
+    @apply container mx-auto max-w-5xl;
   }
 
   dialog:modal {
@@ -120,6 +122,6 @@ const {
     @apply flex flex-col items-center;
   }
   .gallery-area img {
-    @apply aspect-auto w-[clamp(35%,45%,42%)] rounded-md;
+    @apply h-[305px] rounded-md object-cover;
   }
 </style>

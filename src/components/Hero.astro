@@ -1,21 +1,39 @@
 ---
-const { image, heading, subHeading, presentedBy, spotlight } = Astro.props;
+const {
+  image,
+  heading,
+  headingSubline,
+  headingImage,
+  subHeading,
+  presentedBy,
+  spotlight,
+} = Astro.props.hero;
+const { date } = Astro.props.eventInfo;
 ---
 
 <section class="hero-area" style={`background-image: url(${image})`}>
   <div class="hero-area__overlay">
     <div class="hero-area__content">
-      <span>
+      <h1>
         {heading}
-      </span>
-      <span>{presentedBy}</span>
+        <span>
+          {headingSubline}
+        </span>
+      </h1>
+      <img src={headingImage} />
+      <div class="hero-area__content__lower">
+        <div class="hero-area__content__lower">{presentedBy}</div>
+        <div class="hero-area__content__lower">{subHeading}</div>
+        <div class="hero-area__content__lower">{date}</div>
+      </div>
     </div>
   </div>
 </section>
 <!-- Hero Feature Area -->
 <section class="hero-feature-area">
   <div class="hero-feature-area__content">
-    <span>{spotlight}</span>
+    <span class="block">Featuring</span>
+    {spotlight}
   </div>
 </section>
 
@@ -25,19 +43,25 @@ const { image, heading, subHeading, presentedBy, spotlight } = Astro.props;
     @layer min-h-content;
   }
   .hero-area__overlay {
-    @apply hero-overlay bg-opacity-60;
+    @apply hero-overlay bg-neutral bg-opacity-60 py-4;
   }
   .hero-area__content {
-    @apply hero-content flex-col items-center;
+    @apply hero-content mx-auto flex-col content-evenly;
   }
   .hero-area__content h1 {
-    @apply text-3xl font-black text-primary-content;
+    @apply flex flex-col items-center gap-y-2 text-6xl font-black text-primary-content;
   }
   .hero-area__content h1 span {
-    @apply text-xl font-black text-primary-content;
+    @apply block text-xl font-black text-primary-content underline underline-offset-8;
   }
-  .hero-area__content span {
-    @apply text-base font-bold text-secondary-content lg:text-3xl lg:leading-relaxed;
+  .hero-area__content img {
+    @apply w-5/12 flex-col rounded-md shadow-lg;
+  }
+  .hero-area__content .hero-area__content__lower {
+    @apply flex-col;
+  }
+  .hero-area__content .hero-area__content__lower div {
+    @apply my-1 text-center text-xl font-bold text-neutral-content lg:text-3xl;
   }
 
   .hero-feature-area {
@@ -50,6 +74,6 @@ const { image, heading, subHeading, presentedBy, spotlight } = Astro.props;
     @apply text-3xl font-bold text-accent;
   }
   .hero-feature-area__content span {
-    @apply text-2xl font-semibold leading-relaxed text-neutral-content;
+    @apply text-2xl font-semibold leading-relaxed text-primary-content;
   }
 </style>

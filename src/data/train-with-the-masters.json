@@ -3,8 +3,90 @@
     "image": "/img/warren-tricomi-salon.jpeg",
     "imageAlt": "",
     "heading": "Train with the Masters",
-    "subHeading": "Hairdressing Workshop",
-    "presentedBy": "Presented by EDWARD TRICOMI & LAARA RAYNIER",
+    "headingSubline": "A Hairdressing Workshop",
+    "headingImage": "/img/panel-Laara-Edward.jpg",
+    "subHeading": "The Secert to Doubling Your Income",
+    "presentedBy": "EDWARD TRICOMI & LAARA RAYNIER",
     "spotlight": "A UNIQUE COMBINATION OF STYLING, WET AND DRY HIGH-SPEED CUTTING TECHNIQUES, AND THE NEWEST CUTTING-EDGE PRECISION TECHNIQUES"
+  },
+  "info": {
+    "info": "BEAUTY INDUSTRY LEGENDS EDWARD TRICOMI AND LAARA RAYNIER JOIN FORCES TO GIVE HAIRDRESSERS A GROUNDBREAKING OPPORTUNITY TO EXPERIENCE TOP HANDS-ON EDUCATION (WITH VIRTUAL ACCES)",
+    "featureOne": "This thrilling collaboration is NOT your typical workshop, it’s a once-in-a-lifetime opportunity to train with true industry legends!",
+    "featureTwo": "Our “Train with the Masters” workshop will teach stylists priceless industry secrets to success, allowing them to leave with massive confidence and the secrets to taking their businesses to the next level.",
+    "featureThree": "These innovative cutting and styling workshops are a new form of hands-on education on LIVE MODELS. This workshop is live at the Warren Tricomi Salon in New York City or accessible anywhere virtually",
+    "featureFour": "This workshop will include a unique combination of styling, wet and dry high-speed cutting techniques, and the newest cutting-edge precision techniques."
+  },
+  "eventInfo": {
+    "callOut": "LIVE IN-PERSON OR WATCH ON ZOOM",
+    "date": "MONDAY, SEPTEMBER 19TH, 2022",
+    "time": "11:00AM – 4:30PM",
+    "location": "WARREN TRICOMI SALON",
+    "locationName": "THE PLAZA HOTEL",
+    "address": "1 WEST 58TH ST.",
+    "cityStateZip": "NEW YORK, NY 10019",
+    "locationImageAlt": "The Plaza Hotel in New York City",
+    "locationImage": "/img/plaza-hotel.jpeg"
+  },
+  "cta": {
+    "heading": "Sign Up",
+    "optionOne": "WATCH LIVE ON ZOOM $200",
+    "optionTwo": "IN PERSON DEMOS $500",
+    "optionThree": "IN PERSON DEMOS + HANDS-ON LIVE MODEL $1000"
+  },
+  "personalStatments": {
+    "laara": {
+      "stylist": "Larra Raynier",
+      "image": "/img/laara-raynier.jpeg",
+      "imageAlt": "Circular image of Laara Raynier",
+      "quote": "“We bring extensive amounts of experience, and we want to share what we know with stylists to give back. The workshops motivate and inspire stylists and give them a chance to see the different ways you can go about creating a look. You’ll see how to do the most amazing styling, not just the haircut, and it adds this final dimension,”",
+      "statement": "Creative Precision Haircutting Authority Laara Raynier is the protege of Roger Thompson (Sassoon’s first world art director) and brings her vast knowledge and expertise to offer an elite training experience. Raynier is one of the world’s most in-demand haircutting educators with her classes ranked #1 on Google globally for private haircutting classes, workshops, and haircutting education. With her dynamic positive energy and incredible eye, Raynier uses her gifted teaching technique to transform students to create their best work."
+    },
+
+    "edward": {
+      "stylist": "Edward Tricomi",
+      "image": "/img/edward-tricomi.jpg",
+      "imageAlt": "Circular image of Edward Tricomi",
+      "quote": "“I’m like the Rolling Stones, They have an incredible groove with a lot of heart and soul. That’s what my cutting is about. Laara is more structured like The Beatles. They have a beginning, middle and end, with terrific harmonies. It’s a different way of looking at it. Both techniques work terrifically, and if you mix the techniques right, it’s a game-changer.”",
+      "statement": "Celebrity stylist Edward Tricomi, co-founder of Warren Tricomi Salon Group, is legendary for his masterful cutting and styling. Tricomi is known for his 20-minute cutting technique (“Edward Scissorhands” style) and remarkable combination of speed and precision. His celebrated work has appeared in magazines including Vogue and Allure and on the NYFW runways. He has styled for A-listers including George Clooney, Scarlett Johansson, Mick Jagger, and many more. Learning Tricomi’s one-of-a-kind technique empowers stylists with new skills that can be used to help double their income."
+    }
+  },
+  "videoFeature": {
+    "videoFeatureHeading": "WATCH HIGHLIGHTS FROM OUR FEBRUARY TRAIN WITH THE MASTERS WORKSHOP",
+    "youtubeVideoTitle": "Train with The Masters Workshop Highlights",
+    "youtubeVideoID": "HSUpA70bBrM"
+  },
+  "press": {
+    "pressHeading": "OUR AMAZING PRESS FOR TRAIN WITH THE MASTERS",
+    "imgOne": "/img/press-1.png",
+    "imgOneAlt": "",
+    "imgOneLink": "https://behindthechair.com/news/industry-legends-edward-tricomi-laara-raynier-spill-secrets-to-double-your-income/",
+    "imgTwo": "/img/press-2.jpeg",
+    "imgTwoAlt": "",
+    "imgTwoLink": "https://www.esteticamagazine.com/2022/07/22/train-with-the-masters-not-your-typical-workshop/",
+    "imgThree": "/img/press-3.png",
+    "imgThreeAlt": "",
+    "imgThreeLink": "https://www.beautylaunchpad.com/news/events/news/22340068/edward-tricomi-and-laara-raynier-host-train-with-the-masters-event",
+    "imgFour": "/img/press-4.jpeg",
+    "imgFourAlt": "",
+    "imgFourLink": "https://www.modernsalon.com/1082556/groundbreaking-train-with-the-masters-workshop-pairs-edward-tricomi-and-laara-ra"
+  },
+  "gallery": {
+    "galleryMessage": "Master Haircutter Laara Raynier teams up with legendary stylist Edward Tricomi to bring you a special live in person hair cutting and styling workshop. Two authorities in the beauty industry together. Raynier, ranked number one worldwide for teaching private haircutting classes and is famous for her precision haircuts, and master hairstylist Edward Tricomi brings his haircutting, flawless styling, and incredible blow-drying techniques used on the runway to this one of a kind workshop.",
+    "galleryImageOne": "/img/gallery-1.jpeg",
+    "galleryImageOneAlt": "",
+    "galleryImageTwo": "/img/gallery-2.jpeg",
+    "galleryImageTwoAlt": "",
+    "galleryImageThree": "/img/gallery-3.jpeg",
+    "galleryImageThreeAlt": "",
+    "galleryImageFour": "/img/gallery-4.jpeg",
+    "galleryImageFourAlt": "",
+    "galleryImageFive": "/img/gallery-5.jpeg",
+    "galleryImageFiveAlt": "",
+    "galleryImageSix": "/img/gallery-6.jpeg",
+    "galleryImageSixAlt": "",
+    "galleryImageSeven": "/img/gallery-7.jpeg",
+    "galleryImageSevenAlt": "",
+    "galleryImageEight": "/img/gallery-8.jpeg",
+    "galleryImageEightAlt": ""
   }
 }

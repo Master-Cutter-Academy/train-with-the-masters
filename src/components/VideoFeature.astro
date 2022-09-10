@@ -1,5 +1,6 @@
 ---
-const { videoFeatureHeading, youtubeVideoTitle, youtubeVideoID } = Astro.props;
+const { videoFeatureHeading, youtubeVideoTitle, youtubeVideoID } =
+  Astro.props.videoFeature;
 ---
 
 <section class="video-feature-area">
@@ -29,7 +30,7 @@ const { videoFeatureHeading, youtubeVideoTitle, youtubeVideoID } = Astro.props;
     @apply card-body text-center;
   }
   .video-feature-area__content h3 {
-    @apply card-title mb-4 text-2xl font-extrabold;
+    @apply card-title mb-4 text-2xl font-extrabold text-primary-content;
   }
   .video-feature-area__content iframe {
     @apply aspect-video h-full w-full;
