@@ -31,58 +31,57 @@ import {
 } from "../data/train-with-the-masters.json";
 ---
 
-<Base pageTitle="Train with the Masters" />
+<Base pageTitle="Train with the Masters">
+  <!-- Hero Area -->
+  <Hero hero={hero} eventInfo={eventInfo} />
+  <!-- Info Area -->
+  <Info info={info} />
+  <!-- CTA Area 1 -->
+  <section class="cta-area__one">
+    <EventInfo eventInfo={eventInfo} />
 
-<!-- Hero Area -->
-<Hero hero={hero} eventInfo={eventInfo} />
-<!-- Info Area -->
-<Info info={info} />
-<!-- CTA Area 1 -->
-<section class="cta-area__one">
-  <EventInfo eventInfo={eventInfo} />
+    <CTA cta={cta} />
+  </section>
 
-  <CTA cta={cta} />
-</section>
+  <!-- Personal Statments -->
+  <PersonalStatement personalStatements={personalStatments.edward} />
 
-<!-- Personal Statments -->
-<PersonalStatement personalStatements={personalStatments.edward} />
+  <div class="divider"></div>
 
-<div class="divider"></div>
+  <PersonalStatement personalStatements={personalStatments.laara} />
 
-<PersonalStatement personalStatements={personalStatments.laara} />
+  <!-- CTA Area 2 -->
+  <section class="cta-area__two">
+    <CTA cta={cta} />
 
-<!-- CTA Area 2 -->
-<section class="cta-area__two">
-  <CTA cta={cta} />
+    <!-- Video Feature Area -->
+    <VideoFeature videoFeature={videoFeature} />
+  </section>
 
-  <!-- Video Feature Area -->
-  <VideoFeature videoFeature={videoFeature} />
-</section>
+  <!-- Press Area -->
+  <Press press={press} />
 
-<!-- Press Area -->
-<Press press={press} />
+  <!-- Gallery Area -->
+  <Gallery gallery={gallery} />
 
-<!-- Gallery Area -->
-<Gallery gallery={gallery} />
+  <!-- CTA Area 3 -->
+  <div class="cta-area__three">
+    <CTA cta={cta} />
+  </div>
 
-<!-- CTA Area 3 -->
-<div class="cta-area__three">
-  <CTA cta={cta} />
-</div>
+  <!-- Testimonails Area -->
+  <Testimonials heading="Watch Our Amazing Testimonials!" />
 
-<!-- Testimonails Area -->
-<Testimonials heading="Watch Our Amazing Testimonials!" />
+  <!-- Questions Area -->
+  <Questions
+    heading="Have specific questions? Talk to one of our workshop specialists!"
+  />
 
-<!-- Questions Area -->
-<Questions
-  heading="Have specific questions? Talk to one of our workshop specialists!"
-/>
+  <VideoTestimonials testimonials={testimonials} />
 
-<VideoTestimonials testimonials={testimonials} />
-
-<Contact contact={contact} />
-<Footer footer={footer} />
-
+  <Contact contact={contact} />
+  <Footer footer={footer} />
+</Base>
 <style>
   .cta-area__one {
     @apply m-8 flex flex-col place-content-center gap-10 py-3 align-middle lg:flex-row;
