@@ -1,0 +1,49 @@
+---
+import EmailIcon from "./svgs/Email.astro";
+import FacebookIcon from "./svgs/Facebook.astro";
+import InstagramIcon from "./svgs/Instagram.astro";
+import YoutubeIcon from "./svgs/Youtube.astro";
+const { text } = Astro.props.footer;
+---
+
+<footer>
+  <div class="wrapper">
+    <h3>{text}</h3>
+    <div class="socials">
+      <a href="mailto:laara@mastercutteracademy.com">
+        <EmailIcon />
+      </a>
+      <a href="https://facebook.com/mastercutteracademy">
+        <FacebookIcon />
+      </a>
+      <a href="https://instagram.com/laararaynier">
+        <InstagramIcon />
+      </a>
+      <a href="https://youtube.com/laararaynier">
+        <YoutubeIcon />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    @apply mb-12 bg-accent py-16 text-accent-content;
+  }
+
+  .wrapper {
+    @apply container mx-auto flex max-w-5xl flex-col items-center justify-center;
+  }
+
+  h3 {
+    @apply mb-8 text-center text-xl;
+  }
+
+  .socials {
+    @apply flex;
+  }
+
+  footer :global(svg) {
+    @apply mx-2 h-auto w-10;
+  }
+</style>

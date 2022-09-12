@@ -88,5 +88,20 @@
     "galleryImageSevenAlt": "",
     "galleryImageEight": "/img/gallery-8.jpeg",
     "galleryImageEightAlt": ""
+  },
+  "testimonials": {
+    "headertitle": "Watch Our Amazing Testimonials!",
+    "videos": [
+      "https://player.vimeo.com/video/580550033?h=b487e303b4&app_id=122963",
+      "https://player.vimeo.com/video/583209999?h=615c1cfe96&app_id=122963",
+      "https://player.vimeo.com/video/583208242?h=1e3993f856&app_id=122963"
+    ]
+  },
+  "contact": {
+    "text": "Have specific questions? Talk to one of our workshop specialists!",
+    "buttonText": "CONTACT US"
+  },
+  "footer": {
+    "text": "FOLLOW US FOR MORE CONTENT"
   }
 }
