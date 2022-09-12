@@ -20,10 +20,14 @@ module.exports = {
       // Annoated in the comments are the selected daisyUI base theme's default colors
       {
         light: {
-          ...require("daisyui/src/colors/themes")["[data-theme=autumn]"], // Autumn base theme
-          // primary: "#8C0327",
-          // secondary: "#D85251",
-          // accent: "#D59B6A",
+          //...require("daisyui/src/colors/themes")["[data-theme=autumn]"], // Autumn base theme
+          primary: "#fff",
+          "primary-content": "#000",
+          secondary: "#9E090A",
+          // "secondary-dark": "#980011",
+          "secondary-content": "#fff",
+          accent: "#d1d1d1",
+          "accent-content": "#000",
           // neutral: "#826A5C",
           // "base-100": "#f1f1f1",
           // info: "#42ADBB",
@@ -34,9 +38,15 @@ module.exports = {
       },
       {
         dark: {
-          ...require("daisyui/src/colors/themes")["[data-theme=luxury]"], // Luxury base theme
+          // ...require("daisyui/src/colors/themes")["[data-theme=luxury]"], // Luxury base theme
           // primary: "#ffffff",
-          // secondary: "#152747",
+          primary: "#fff",
+          "primary-content": "#000",
+          secondary: "#9E090A",
+          // "secondary-content-dark": "#980011",
+          "secondary-content": "#fff",
+          accent: "#d1d1d1",
+          "accent-content": "#000",
           // accent: "#513448",
           // neutral: "#171618",
           // "neutral-content": "#dca54c",

@@ -1,63 +1,77 @@
 ---
-const { image, heading, headingImage, subHeading, presentedBy, spotlight } =
-  Astro.props.hero;
+const {
+  image,
+  heading,
+  headingSubline,
+  headingImage,
+  subHeading,
+  presentedBy,
+  spotlight,
+} = Astro.props.hero;
 const { date } = Astro.props.eventInfo;
 ---
 
-<section class="hero-area" style={`background-image: url(${image})`}>
-  <div class="hero-area__overlay">
-    <div class="hero-area__content">
+<section class="hero-area">
+  <div class="hero-area__content">
+    <h1>
+      {heading}
       <span>
-        {heading}
+        {headingSubline}
       </span>
-      <img src={headingImage} />
-      <span>{presentedBy}</span>
-      <span>{subHeading}</span>
-      <span>{date}</span>
+    </h1>
+    <img src={headingImage} />
+    <div class="hero-area__content__lower">
+      <h3>{presentedBy}</h3>
+      <h3>{subHeading}</h3>
+      <h3>{date}</h3>
     </div>
   </div>
 </section>
 <!-- Hero Feature Area -->
 <section class="hero-feature-area">
   <div class="hero-feature-area__content">
-    <span>Featuring<br />{spotlight}</span>
+    <h2 class="block">Featuring</h2>
+    <span>{spotlight}</span>
   </div>
 </section>
 
 <style>
-  .hero-area {
-    @apply hero py-20;
+  /* .hero-area {
+    @apply hero;
     @layer min-h-content;
-  }
-  .hero-area__overlay {
-    @apply hero-overlay grid justify-center bg-opacity-60;
+  } */
+  .hero-area {
+    @apply hero bg-primary py-8;
   }
   .hero-area__content {
-    @apply hero-content flex-col items-center;
+    @apply hero-content mx-auto flex-col content-evenly;
   }
   .hero-area__content h1 {
-    @apply text-3xl font-black text-primary-content;
+    @apply flex flex-col items-center gap-y-0 text-center text-6xl font-black text-primary-content;
   }
   .hero-area__content h1 span {
-    @apply text-xl font-black text-primary-content;
+    @apply block text-xl font-black underline underline-offset-8;
   }
   .hero-area__content img {
-    @apply w-1/3 rounded-md;
+    @apply my-4 w-10/12 flex-col rounded-md shadow-lg lg:w-8/12;
   }
-  .hero-area__content span {
-    @apply text-base font-bold text-secondary-content lg:text-3xl lg:leading-relaxed;
+  .hero-area__content .hero-area__content__lower {
+    @apply flex flex-col gap-y-2;
+  }
+  .hero-area__content .hero-area__content__lower h3 {
+    @apply text-center text-xl font-bold text-primary-content lg:text-3xl;
   }
 
   .hero-feature-area {
-    @apply bg-primary py-8 px-6;
+    @apply bg-secondary py-8 px-6;
   }
   .hero-feature-area__content {
-    @apply mx-auto max-w-6xl text-center;
+    @apply mx-auto max-w-6xl bg-secondary text-center text-secondary;
   }
-  .hero-feature-area__content h3 {
-    @apply text-3xl font-bold text-accent;
+  .hero-feature-area__content h2 {
+    @apply mb-4 text-3xl font-bold text-secondary-content;
   }
   .hero-feature-area__content span {
-    @apply text-2xl font-semibold leading-relaxed text-neutral-content;
+    @apply text-lg font-semibold leading-relaxed text-secondary-content;
   }
 </style>

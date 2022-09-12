@@ -14,41 +14,46 @@ const {
 
 <!-- Event Info -->
 <section class="event-info">
-  <h3>{callOut}</h3>
-  <span class="event-info__date">
-    {date}
-    <br />
-    {time}
-    <br />
-  </span>
-  <hr />
-  <span class="event-info__location">
-    <span class="event-info__location__name">{location}</span>
-    <br />
-    {locationName}
-    <br />
-    {address}
-    <br />
-    {cityStateZip}
-  </span>
+  <div class="wrapper">
+    <h3>{callOut}</h3>
+    <span class="event-info__date">
+      {date}
+      <br />
+      {time}
+      <br />
+    </span>
+    <hr />
+    <span class="event-info__location">
+      <span class="event-info__location__name">{location}</span>
+      <br />
+      {locationName}
+      <br />
+      {address}
+      <br />
+      {cityStateZip}
+    </span>
+  </div>
   <img src={locationImage} alt={locationImageAlt} />
 </section>
 
 <style>
   .event-info {
-    @apply card card-normal min-h-fit basis-1/3 flex-wrap justify-center border bg-neutral pt-2 text-center;
+    @apply card card-normal min-h-fit basis-1/3 flex-wrap justify-center border bg-accent pt-4 text-center;
+  }
+  .wrapper {
+    @apply px-4;
   }
   .event-info h3 {
-    @apply my-2 text-base font-semibold text-neutral-content lg:text-xl lg:leading-loose;
+    @apply my-2 text-base font-semibold text-accent-content lg:text-xl lg:leading-loose;
   }
   .event-info__date {
-    @apply text-lg font-bold text-info lg:text-2xl;
+    @apply text-lg font-bold text-accent-content lg:text-2xl;
   }
   .event-info hr {
     @apply my-3;
   }
   .event-info__location {
-    @apply prose-lg font-semibold text-info lg:prose-2xl;
+    @apply prose-lg font-semibold  text-accent-content lg:prose-2xl;
   }
   .event-info__location__name {
     @apply text-xl font-extrabold text-accent-content lg:text-3xl;

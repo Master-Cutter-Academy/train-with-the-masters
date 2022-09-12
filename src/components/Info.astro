@@ -13,31 +13,39 @@ const { info, featureOne, featureTwo, featureThree, featureFour, featureFive } =
       <li>{featureTwo}</li>
       <li>{featureThree}</li>
       <li>{featureFour}</li>
-      <li>{featureFive}</li>
     </ul>
-    <div>THIS IS A WORKSHOP YOU WON’T WANT TO MISS!</div>
+    <div class="text-center font-mono text-3xl font-bold">
+      THIS IS A WORKSHOP YOU WON’T WANT TO MISS!
+    </div>
   </div>
-  <div class="info-area__offer">
-    <div>– SPECIAL VIP ACCESS –</div>
-    <p>
-      FIRST 10 PEOPLE TO SIGN UP FOR ‘HANDS-ON’ GET THE OPPORTUNITY TO
-      PARTICIPATE IN SEPTEMBER FASHION WEEK WITH EDWARD TRICOMI & LAARA RAYNIER
-      AND ENJOY COCKTAILS WITH US AFTER THIS EVENT
-    </p>
+</section>
+<section class="info-area__offer">
+  <div class="info-area__offer__content">
+    <span class="block text-xl font-bold">– SPECIAL VIP ACCESS –</span>
+    FIRST 10 PEOPLE TO SIGN UP FOR ‘HANDS-ON’ GET THE OPPORTUNITY TO PARTICIPATE
+    IN SEPTEMBER FASHION WEEK WITH EDWARD TRICOMI & LAARA RAYNIER AND ENJOY COCKTAILS
+    WITH US AFTER THIS EVENT
   </div>
 </section>
 
 <style>
   .info-area {
-    @apply px-8 pt-10 lg:pt-8;
+    /* @apply bg-primary p-10 lg:pt-8; */
+    @apply bg-primary py-8;
   }
   .info-area__content {
-    @apply container mx-auto max-w-5xl;
+    @apply container mx-auto max-w-5xl text-primary-content;
   }
   .info-area__content h3 {
     @apply text-center text-2xl font-bold;
   }
   .info-area__content ul {
     @apply prose-base list-disc lg:prose-lg;
+  }
+  .info-area__offer {
+    @apply w-full bg-secondary py-8;
+  }
+  .info-area__offer .info-area__offer__content {
+    @apply mx-auto w-8/12 text-center text-lg font-medium text-secondary-content;
   }
 </style>

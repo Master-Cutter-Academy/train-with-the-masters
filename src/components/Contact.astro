@@ -1,0 +1,28 @@
+---
+const { text, buttonText } = Astro.props.contact;
+---
+
+<div class="contact">
+  <div class="wrapper">
+    <h3>{text}</h3>
+    <button class="btn">{buttonText}</button>
+  </div>
+</div>
+
+<style>
+  .contact {
+    @apply border-y-8 border-y-secondary bg-primary-content py-6 text-secondary-content;
+  }
+
+  .wrapper {
+    @apply container mx-auto flex max-w-5xl flex-col items-center justify-around md:flex-row;
+  }
+
+  h3 {
+    @apply mb-4 text-center text-xl md:mb-0;
+  }
+
+  .btn {
+    @apply bg-secondary text-secondary-content hover:bg-secondary-focus;
+  }
+</style>
