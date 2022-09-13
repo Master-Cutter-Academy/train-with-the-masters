@@ -12,6 +12,7 @@ import Info from "../components/Info.astro";
 import PersonalStatement from "../components/PersonalStatement.astro";
 import Press from "../components/Press.astro";
 import Questions from "../components/Questions.astro";
+import Schedule from "../components/Schedule.astro";
 import Testimonials from "../components/Testimonials.astro";
 import VideoFeature from "../components/VideoFeature.astro";
 import VideoTestimonials from "../components/VideoTestimonials.astro";
@@ -26,6 +27,7 @@ import {
   info,
   personalStatments,
   press,
+  schedule,
   testimonials,
   videoFeature,
 } from "../data/train-with-the-masters.json";
@@ -42,6 +44,9 @@ import {
 
     <CTA cta={cta} />
   </section>
+
+  <!-- Schedule Area -->
+  <Schedule schedule={schedule} />
 
   <!-- Personal Statments -->
   <PersonalStatement personalStatements={personalStatments.edward} />

@@ -1,0 +1,85 @@
+---
+const { morning, afternoon } = Astro.props.schedule;
+---
+
+<div class="wrapper">
+  <h3 set:html={morning.title}></h3>
+  <div class="content">
+    <!-- <p set:html={morning.content}></p> -->
+    <h4 set:html={morning.subtitle}></h4>
+    <div class="schedule">
+      <div class="morning">
+        <div class="edward">
+          <h5>{morning.edward.title}</h5>
+          <ul>
+            {morning.edward.list.map((li) => <li>{li}</li>)}
+          </ul>
+        </div>
+        <div class="laara">
+          <h5>{morning.laara.title}</h5>
+          <ul>
+            {morning.laara.list.map((li) => <li>{li}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 set:html={afternoon.title}></h3>
+  <div class="content">
+    <div class="afternoon">
+      <h4>{afternoon.subtitle}</h4>
+      <p set:html={afternoon.text}></p>
+      <ul>
+        {afternoon.list.map((li) => <li>{li}</li>)}
+      </ul>
+    </div>
+  </div>
+  <hr />
+</div>
+
+<style>
+  .wrapper {
+    @apply bg-primary py-8 text-primary-content;
+  }
+
+  .content {
+    @apply container mx-auto max-w-5xl py-8 px-4;
+  }
+
+  h3 {
+    @apply w-full bg-secondary py-8 text-center text-2xl font-bold text-secondary-content;
+  }
+
+  p,
+  h4 {
+    @apply mb-8 text-center text-lg font-semibold;
+  }
+
+  h5 {
+    @apply mb-4 text-center text-xl font-bold;
+  }
+
+  .schedule {
+    @apply flex flex-col items-center justify-around text-lg font-semibold;
+  }
+
+  .morning {
+    @apply grid grid-cols-1 gap-12 lg:grid-cols-2;
+  }
+
+  .afternoon h4 {
+    @apply text-2xl;
+  }
+
+  ul {
+    @apply list-inside;
+  }
+
+  li {
+    @apply mb-4 list-disc font-semibold;
+  }
+
+  hr {
+    @apply border border-black/20;
+  }
+</style>
